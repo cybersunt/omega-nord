@@ -1,0 +1,106 @@
+  .nav-toggle {
+    width: 17px;
+    height: 13px;
+    border: none;
+    border-radius: none;
+    padding: 0;
+    display: block;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    display: block;
+    position: absolute;
+    top: 5px;
+    width: inherit;
+    height: 2px;
+    background-color: #ffffff;
+    transition: background-color 0s 0.3s;
+
+    &::before,
+    &::after {
+      @include abs(100%, 2px)
+      display: block;
+      background-color: #ffffff;
+      content: '';
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0s;
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      top: 5px;
+    }
+  }
+
+  .nav-toggle--open span {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+        transition-delay: 0s, 0.3s;
+    }
+
+    &::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes comeout {
+    0% {
+        transform: translateX(-375px);
+    }
+
+    70% {
+        transform: translateX(-150px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+  }
+
+  @keyframes moveof {
+    0% {
+        transform: translateX(0);
+    }
+
+    70% {
+        transform: translateX(-150px);
+    }
+
+    100% {
+        transform: translateX(-375px);
+    }
+  }
+
+  .nav-toggle + .main-nav    {
+    transform: translateX(-375px);
+    animation: moveof 0.3s;
+  }
+
+  .nav-toggle--open + .main-nav    {
+    transform: translateX(0);
+    animation: comeout 0.3s;
+  }
+
+  .nav-toggle + .main-nav--nojs    {
+    transform: translateX(-375px);
+  }
+}

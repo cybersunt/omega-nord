@@ -1,0 +1,15 @@
+.main-nav {
+}
+
+.main-nav__list {
+  @include ul-rst;
+}
+
+.main-nav__item {
+  padding: 15px 20px;
+}
+
+
+.main-nav__link {
+  @include text(16px, 20px, $white);
+}

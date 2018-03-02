@@ -1,0 +1,27 @@
+include mixins
+
+<!-- Doctype HTML5 -->
+doctype html
+html(lang='ru')
+  head
+    // Задаем кодировку для страницы
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width')
+    link(href='css/style.css', rel='stylesheet')
+
+    // SEO Задание тега Title
+    title Тестовое задание Омега Норд
+    // SEO Задание тега Description
+    meta(name='description', content='')
+
+  body
+    header.header
+      .header__wrap
+        button(type='button', aria-label='Переключатель открыть/закрыть меню').nav-toggle
+          span
+        nav.main-nav
+          ul.main-nav__list
+            each item in mainNav
+              li.main-nav__item
+                a.main-nav__link(href='#')= item

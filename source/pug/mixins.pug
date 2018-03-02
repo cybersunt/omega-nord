@@ -1,0 +1,8 @@
+mixin nav (className, name, items)
+  nav(class=`${className}`)
+    button(class=`${className}__name`, href='#', disabled)=name
+    ul(class=`${className}__list`)
+      each item in items
+        li(class=`${className}__item`)
+          a(class=`${className}__link`, href='#')= item
+
