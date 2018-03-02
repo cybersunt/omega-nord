@@ -6,3 +6,7 @@ mixin nav (className, name, items)
         li(class=`${className}__item`)
           a(class=`${className}__link`, href='#')= item
 
+mixin heading (className, name)
+  div(class=`${className}__heading`)
+        h2(class=`${className}__heading-left`)=name
+        div(class=`${className}__heading-right`)

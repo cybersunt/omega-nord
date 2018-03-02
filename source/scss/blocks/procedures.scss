@@ -1,0 +1,129 @@
+.procedures {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.procedures__heading {
+  min-height: 56px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.procedures__heading-left {
+  @include text(30px, 55.88px, $white);
+  background-color: $pinkvalley;
+  font-weight: 100;
+  margin: 0;
+  width: 50%;
+  padding-left: 70px;
+}
+
+.procedures__heading-right {
+  width: 50%;
+  background-color: $pinkvalley;
+  opacity: 0.55;
+}
+
+.procedures__wrap {
+  @include wrap;
+}
+
+.procedures__text {
+  @include text(18px, 55.88px, $lightgray);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.procedures__list {
+  @include ul-line;
+  justify-content: center;
+}
+
+.procedures__item {
+  max-width: 369px;
+  min-width: 200px;
+  text-align: center;
+  margin-right: 7.65%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.procedures__link {
+  @include text(24px, 24px, $brown);
+  max-width: inherit;
+  min-width: inherit;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+
+  &:hover .procedures__img-corner,
+  &:focus .procedures__img-corner {
+    border-color: $pinkvalley;
+  }
+
+  &:hover span,
+  &:focus span {
+    color: $white;
+    background-color: $pinkvalley;
+
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: calc(50% - 17.5px);
+      content: '';
+      border-top: 17.5px solid $pinkvalley;
+      border-left: 17.5px solid transparent;
+      border-right: 17.5px solid transparent;
+    }
+  }
+}
+
+.procedures__link span {
+  display: inline-flex;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 7.5px;
+  position: relative;
+}
+
+.procedures__img-frame {
+  position: relative;
+  max-width: inherit;
+  min-width: inherit;
+  min-height: 182px;
+  max-height: 335px;
+  margin-bottom: 15px
+}
+
+.procedures__img-corner {
+  @include abs(18.9%, 20.89%);
+  border: 8px solid $turquoise;
+  border-right: none;
+  border-bottom: none;
+
+
+  &--top-right {
+    transform: rotate(90deg);
+    right: 0;
+  }
+
+  &--bottom-left {
+    transform: rotate(-90deg);
+    bottom: 0;
+  }
+
+  &--bottom-right {
+    transform: rotate(180deg);
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.procedures__img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}

@@ -42,5 +42,23 @@
      "imgHeight": "50",
      "imgAlt": "поиск по карте"
     }
+  ],
+
+  "procedures": [
+    {
+    "name": "Лицо >",
+     "imgSrc": "../img/content/face.jpg",
+     "imgAlt": "Лицо"
+    },
+    {
+    "name": "Тело >",
+     "imgSrc": "../img/content/body.jpg",
+     "imgAlt": "Тело"
+    },
+    {
+     "name": "Волосы >",
+     "imgSrc": "../img/content/hair.jpg",
+     "imgAlt": "Волосы"
+    }
   ]
 }

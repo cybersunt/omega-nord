@@ -28,4 +28,19 @@ html(lang='ru')
                   .main-nav__img-wrap
                     img(src= menuitem.imgSrc, alt= menuitem.imgAlt, width= menuitem.imgWidth, height= menuitem.imgHeight).main-nav__icon
                   span= menuitem.name
-
+    h1.visually-hidden Косметологические услуги
+    section.procedures
+      +heading('procedures', 'Диагностика и процедуры:')
+      .procedures__wrap
+        p.procedures__text Выберите интересующий Вас раздел:
+        ul.procedures__list
+          each procedure, value in procedures
+            li.procedures__item
+              a(href="#").procedures__link
+                .procedures__img-frame
+                  .procedures__img-corner.procedures__img-corner--top-left
+                  .procedures__img-corner.procedures__img-corner--top-right
+                  .procedures__img-corner.procedures__img-corner--bottom-left
+                  .procedures__img-corner.procedures__img-corner--bottom-right
+                  img(src= procedure.imgSrc, alt= procedure.imgAlt).procedures__img
+                span= procedure.name
