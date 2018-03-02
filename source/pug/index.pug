@@ -22,6 +22,10 @@ html(lang='ru')
           span
         nav.main-nav
           ul.main-nav__list
-            each item in mainNav
+            each menuitem, value in menuitems
               li.main-nav__item
-                a.main-nav__link(href='#')= item
+                a.main-nav__link(href='#')
+                  .main-nav__img-wrap
+                    img(src= menuitem.imgSrc, alt= menuitem.imgAlt, width= menuitem.imgWidth, height= menuitem.imgHeight).main-nav__icon
+                  span= menuitem.name
+

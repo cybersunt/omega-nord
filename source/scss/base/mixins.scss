@@ -1,11 +1,11 @@
 @mixin wrap {
-  // height: inherit;
-  // padding-left: 20px;
-  // padding-right: 20px;
-  // margin: 0 auto;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
+  height: inherit;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   // @media #{$mobile} {
   //   max-width: 960px;

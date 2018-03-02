@@ -1,3 +1,46 @@
 {
-  "mainNav": ["Главная", "Услуги адвоката", "Практика", "Контакты"]
+  "menuitems": [
+    {
+    "name": "новости",
+     "imgSrc": "../img/content/news.png",
+     "imgWidth": "55",
+     "imgHeight": "49",
+     "imgAlt": "новости"
+    },
+    {
+    "name": "справочник",
+     "imgSrc": "../img/content/handbook.png",
+     "imgWidth": "42",
+     "imgHeight": "53",
+     "imgAlt": "нсправочник"
+    },
+    {
+     "name": "советы косметологов",
+     "imgSrc": "../img/content/cosmetology-advice.png",
+     "imgWidth": "54",
+     "imgHeight": "69",
+     "imgAlt": "советы косметологов"
+    },
+    {
+     "name": "косметологические клиники",
+     "imgSrc": "../img/content/clinics.png",
+     "imgWidth": "69",
+     "imgHeight": "46",
+     "imgAlt": "косметологические клиники"
+    },
+    {
+     "name": "диагностика и процедуры",
+     "imgSrc": "../img/content/diagnostics.png",
+     "imgWidth": "56",
+     "imgHeight": "72",
+     "imgAlt": "диагностика и процедуры"
+    },
+    {
+     "name": "поиск по карте",
+     "imgSrc": "../img/content/lens.png",
+     "imgWidth": "48",
+     "imgHeight": "50",
+     "imgAlt": "поиск по карте"
+    }
+  ]
 }

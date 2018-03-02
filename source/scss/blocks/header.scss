@@ -1,6 +1,13 @@
-// .header {
-// }
+.header {
+  width: 100%;
+  background-image: url('../img/decoration/bg.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 5px #008800;
+}
 
 .header__wrap {
   @include wrap;
+  padding: 150px 0 20px 0;
+  bbox-shadow: 0 0 5px red;
 }

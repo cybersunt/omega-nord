@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     gp = require('gulp-load-plugins')(),
     include = require("posthtml-include"),
     rsp = require('remove-svg-properties').stream,
+
     fs = require('fs'),
     sassGlob = require('gulp-sass-glob'),
 
@@ -31,7 +32,7 @@ gulp.task('styles', function() {
     .pipe(gp.csso())
     .pipe(gp.rename({ suffix: '.min' }))
     .pipe(gulp.dest('./public/css'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.reload({stream : true}));
 });
 
 // ЗАДАЧА: Сборка HTML

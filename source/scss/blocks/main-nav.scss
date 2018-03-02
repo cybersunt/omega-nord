@@ -1,15 +1,52 @@
 .main-nav {
+  width: 610px;
 }
 
 .main-nav__list {
   @include ul-rst;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .main-nav__item {
-  padding: 15px 20px;
+  width: 160px;
+  text-align: center;
+  margin-right: 60px;
+  margin-bottom: 60px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(1),
+  &:nth-last-child(2),
+  &:nth-last-child(3) {
+    margin-bottom: 0;
+  }
 }
 
-
 .main-nav__link {
-  @include text(16px, 20px, $white);
+  @include text(15px, 15px, $lightsilver);
+  width: inherit;
+
+  span {
+    display: inline-flex;
+  }
+
+}
+
+.main-nav__img-wrap {
+  width: 106px;
+  height: 106px;
+  border: 1px solid $silver;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.main-nav__icon {
+  display: block;
 }
