@@ -6,7 +6,7 @@
 .procedures__heading {
   min-height: 56px;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 33px;
 }
 
 .procedures__heading-left {
@@ -21,16 +21,21 @@
 
 .procedures__wrap {
   @include wrap;
+
 }
 
 .procedures__text {
   @include text(18px, 55.88px, $lightgray);
+  width: 100%;
+  text-align: center;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .procedures__list {
   @include ul-line;
+  width: 100%;
+  max-width: 1300px;
   justify-content: center;
 }
 
@@ -38,7 +43,7 @@
   max-width: 369px;
   min-width: 200px;
   text-align: center;
-  margin-right: 7.65%;
+  margin-right: 6.92%;
 
   &:last-child {
     margin-right: 0;
@@ -46,7 +51,7 @@
 }
 
 .procedures__link {
-  @include text(24px, 24px, $brown);
+  @include text(32px, 32px, $brown);
   max-width: inherit;
   min-width: inherit;
   text-align: center;
@@ -90,7 +95,7 @@
   min-width: inherit;
   min-height: 182px;
   max-height: 335px;
-  margin-bottom: 15px
+  margin-bottom: 18px;
 }
 
 .procedures__img-corner {

@@ -5,7 +5,7 @@
   width: 100%;
 }
 .news__slides {
-  width: 63.75%;
+  width: 64.2%;
   display: flex;
   align-items: center;
   background-color: $palegray;
@@ -48,9 +48,10 @@
 .news__layout {
   @include text(18px, 28.12px, $darkslategray);
   position: absolute;
+  width: 100%;
   bottom: 0;
   padding-top: 30px;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
   padding-left: 18.79%;
   padding-right: 19.6%;
   background-color: $white;
@@ -67,9 +68,7 @@
 .news__slide-heading {
   font-size: 24px;
   font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 5px;
-
+  margin: 0;
   @media #{$desktop} {
     font-size: 20px;
   }
@@ -80,7 +79,7 @@
 }
 
 .news__annotation {
-  width: 36.25%;
+  width: 35.8%;
   border-left: 1px solid $white;
   flex-grow: 1;
 }
@@ -94,7 +93,7 @@
 }
 
 .news__item {
-  padding: 4% 4.3%;
+  padding: 4.1% 4.3% 3.65%;
   background-color: $palegray;
   position: relative;
 
@@ -155,11 +154,13 @@
 .news__link {
   display: flex;
   align-items: center;
+  padding-top: 3px;
+  max-width: 440px;
 }
 
 .news__thumb {
   display: block;
-  margin-right: 6.88%;
+  margin-right: 10.88%;
 
   @media #{$desktop} {
     width: 60px;
@@ -181,15 +182,15 @@
 .news__button {
   width: 100%;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 66px;
+  padding-bottom: 69px;
 }
 
 .news__btn {
-  @include text(18px, 20px, $blue);
+  @include text(20px, 55.88px, $blue);
   border: 1px solid $lightblue;
-  padding-top: 16px;
-  padding-bottom: 18px;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
   padding-left: 50px;
   padding-right: 70px;
   border-radius: 35px;
@@ -205,12 +206,12 @@
 
   &::before {
     transform: rotate(-45deg);
-    bottom: 22px;
+    bottom: 28px;
   }
 
   &::after {
     transform: rotate(45deg);
-    top: 22px;
+    top: 28px;
   }
 
   &:hover,
