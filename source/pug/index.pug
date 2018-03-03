@@ -1,4 +1,7 @@
-include mixins
+mixin heading (className, name)
+  div(class=`${className}__heading`)
+        h2(class=`${className}__heading-left`)=name
+        div(class=`${className}__heading-right`)
 
 <!-- Doctype HTML5 -->
 doctype html
@@ -29,6 +32,45 @@ html(lang='ru')
                     img(src= menuitem.imgSrc, alt= menuitem.imgAlt, width= menuitem.imgWidth, height= menuitem.imgHeight).main-nav__icon
                   span= menuitem.name
     h1.visually-hidden Косметологические услуги
+    section.news
+      +heading('news', 'Новости:')
+      .news__slides.slideshow
+        ul.news__slides-list.slideshow__list
+          li.news__slide.slideshow__item.slideshow__item--active
+            a(href="#").news__slide-link
+              img(src='img/content/slide.jpg', alt='Медицинское образование в РФ в сфере косметологии').news__slide-img
+              .news__layout
+                p.news__slide-heading Медицинское образование в РФ в сфере косметологии: уровни, стандарты, тонкости
+                p.news__slide-description В статье речь пойдет о среднем и высшем медицинском образовании в сфере эстетической медицины.
+          li.news__slide.slideshow__item
+            a(href="#").news__slide-link
+              img(src='img/content/slide.jpg', alt='Медицинское образование в РФ в сфере косметологии').news__slide-img
+              .news__layout
+                p.news__slide-heading Медицинское образование в РФ в сфере косметологии
+                p.news__slide-description В статье речь пойдет о среднем и высшем медицинском образовании в сфере эстетической медицины.
+          li.news__slide.slideshow__item
+              a(href="#").news__slide-link
+              img(src='img/content/slide.jpg', alt='Медицинское образование в РФ в сфере косметологии').news__slide-img
+              .news__layout
+                p.news__slide-heading Медицинское образование в РФ в сфере косметологии
+                p.news__slide-description В статье речь пойдет о среднем и высшем медицинском образовании в сфере эстетической медицины.
+      .news__annotation
+        ul.news__list.slideshow__toggles
+          li.news__item.slideshow__toggle
+            a(href='#').news__link
+             img(src='img/content/pic-news-item.png', alt='Медицинское образование в РФ в сфере косметологии').news__thumb
+             p.news__description В госпитале Вишневского научились выращивать сердце в пробирке
+          li.news__item.news__item--active.slideshow__toggle.slideshow__toggle--active
+            a(href='#').news__link
+             img(src='img/content/pic-news-item.png', alt='Медицинское образование в РФ в сфере косметологии').news__thumb
+             p.news__description В госпитале Вишневского научились выращивать сердце в пробирке
+          li.news__item.slideshow__toggle
+            a(href='#').news__link
+             img(src='img/content/pic-news-item.png', alt='Медицинское образование в РФ в сфере косметологии').news__thumb
+             p.news__description В госпитале Вишневского научились выращивать сердце в пробирке
+      .news__button
+        a(href="news.html").news__btn перейти в раздел
+
     section.procedures
       +heading('procedures', 'Диагностика и процедуры:')
       .procedures__wrap

@@ -18,12 +18,9 @@ body {
   margin: 0 auto;
   font-size: 19px;
   line-height: 19px;
+  color: $darkslategray;
   font-family: $font-face;
   background-color: $white;
-  // font-size: $base-ff;
-  // line-height: $base-lh;
-  // color: $dark-grey;
-  // overflow-x: hidden;
 }
 
 .visually-hidden {

@@ -41,12 +41,19 @@
   line-height: $line-height;
 }
 
-@mixin heading($font-color, $span-color) {
-  font-size: 50px;
-  line-height: 50px;
-  color: $font-color;
-  font-family: $heading;
-  margin-top: 0;
+@mixin heading($bg-color) {
+  font-size: 30px;
+  line-height: 55.88px;
+  color: $white;
+  background-color: $bg-color;
+  font-weight: 100;
+  margin: 0;
+  width: 50%;
+  padding-left: 70px;
+
+  @media #{$desktop} {
+    font-size: 24px;
+  }
 
   // @media screen and (min-width: $desktop) {
   //   font-size: 52px;
@@ -54,5 +61,6 @@
   //   letter-spacing: -2px;
   // }
 }
+
 
 

@@ -10,12 +10,7 @@
 }
 
 .procedures__heading-left {
-  @include text(30px, 55.88px, $white);
-  background-color: $pinkvalley;
-  font-weight: 100;
-  margin: 0;
-  width: 50%;
-  padding-left: 70px;
+  @include heading ($pinkvalley);
 }
 
 .procedures__heading-right {

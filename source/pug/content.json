@@ -2,42 +2,42 @@
   "menuitems": [
     {
     "name": "новости",
-     "imgSrc": "../img/content/news.png",
+     "imgSrc": "img/content/news.png",
      "imgWidth": "55",
      "imgHeight": "49",
      "imgAlt": "новости"
     },
     {
     "name": "справочник",
-     "imgSrc": "../img/content/handbook.png",
+     "imgSrc": "img/content/handbook.png",
      "imgWidth": "42",
      "imgHeight": "53",
      "imgAlt": "нсправочник"
     },
     {
      "name": "советы косметологов",
-     "imgSrc": "../img/content/cosmetology-advice.png",
+     "imgSrc": "img/content/cosmetology-advice.png",
      "imgWidth": "54",
      "imgHeight": "69",
      "imgAlt": "советы косметологов"
     },
     {
      "name": "косметологические клиники",
-     "imgSrc": "../img/content/clinics.png",
+     "imgSrc": "img/content/clinics.png",
      "imgWidth": "69",
      "imgHeight": "46",
      "imgAlt": "косметологические клиники"
     },
     {
      "name": "диагностика и процедуры",
-     "imgSrc": "../img/content/diagnostics.png",
+     "imgSrc": "img/content/diagnostics.png",
      "imgWidth": "56",
      "imgHeight": "72",
      "imgAlt": "диагностика и процедуры"
     },
     {
      "name": "поиск по карте",
-     "imgSrc": "../img/content/lens.png",
+     "imgSrc": "img/content/lens.png",
      "imgWidth": "48",
      "imgHeight": "50",
      "imgAlt": "поиск по карте"
@@ -47,17 +47,17 @@
   "procedures": [
     {
     "name": "Лицо >",
-     "imgSrc": "../img/content/face.jpg",
+     "imgSrc": "img/content/face.jpg",
      "imgAlt": "Лицо"
     },
     {
     "name": "Тело >",
-     "imgSrc": "../img/content/body.jpg",
+     "imgSrc": "img/content/body.jpg",
      "imgAlt": "Тело"
     },
     {
      "name": "Волосы >",
-     "imgSrc": "../img/content/hair.jpg",
+     "imgSrc": "img/content/hair.jpg",
      "imgAlt": "Волосы"
     }
   ]
