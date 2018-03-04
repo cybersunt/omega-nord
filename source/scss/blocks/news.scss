@@ -22,7 +22,7 @@
 }
 
 .news__heading-left {
-  @include heading ($darkpink);
+  @include heading-left ($darkpink);
 }
 
 .news__heading-right {
@@ -33,7 +33,6 @@
 
 .news__slides-list {
   @include ul-rst;
-
 }
 
 .news__slide {
@@ -184,6 +183,11 @@
   text-align: center;
   padding-top: 66px;
   padding-bottom: 69px;
+
+  @media #{$desktop} {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .news__btn {

@@ -4,24 +4,19 @@
 }
 
 .procedures__heading {
-  min-height: 56px;
-  display: flex;
-  margin-bottom: 33px;
+  @include heading;
 }
 
 .procedures__heading-left {
-  @include heading ($pinkvalley);
+  @include heading-left($pinkvalley);
 }
 
 .procedures__heading-right {
-  width: 50%;
-  background-color: $pinkvalley;
-  opacity: 0.55;
+  @include heading-right($pinkvalley);
 }
 
 .procedures__wrap {
   @include wrap;
-
 }
 
 .procedures__text {
@@ -30,6 +25,12 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 23px;
+
+  @media #{$tablet} {
+    font-szie: 16px;
+    line-height: 22px;
+    margin-bottom: 35px;
+  }
 }
 
 .procedures__list {
@@ -37,6 +38,11 @@
   width: 100%;
   max-width: 1300px;
   justify-content: center;
+
+  @media #{$tablet} {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .procedures__item {
@@ -48,6 +54,16 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @media #{$tablet} {
+    width: 100%;
+    margin: 0 auto 30px;
+
+    &:last-child {
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .procedures__link {
@@ -57,6 +73,10 @@
   text-align: center;
   cursor: pointer;
   font-weight: 700;
+
+  @media #{$tablet} {
+    font-size: 22px;
+  }
 
   &:hover .procedures__img-corner,
   &:focus .procedures__img-corner {

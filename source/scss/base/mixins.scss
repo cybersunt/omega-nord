@@ -41,7 +41,27 @@
   line-height: $line-height;
 }
 
-@mixin heading($bg-color) {
+@mixin heading {
+  min-height: 56px;
+  display: flex;
+  margin-bottom: 33px;
+
+  @media #{$mobile} {
+    min-height: 40px;
+  }
+}
+
+@mixin heading-right($bg-color) {
+  width: 50%;
+  background-color: $bg-color;
+  opacity: 0.55;
+
+  @media #{$tablet} {
+    display: none;
+  }
+}
+
+@mixin heading-left($bg-color) {
   font-size: 30px;
   line-height: 55.88px;
   color: $white;
@@ -53,14 +73,17 @@
 
   @media #{$desktop} {
     font-size: 24px;
-    line-height: 36px;
   }
 
-  // @media screen and (min-width: $desktop) {
-  //   font-size: 52px;
-  //   line-height: 49px;
-  //   letter-spacing: -2px;
-  // }
+  @media #{$tablet} {
+    font-size: 20px;
+    padding: 0 50px;
+    width: 100%;
+  }
+
+  @media #{$tablet} {
+    font-size: 16px;
+  }
 }
 
 
