@@ -42,9 +42,9 @@
 }
 
 @mixin heading {
+  width: 100%;
   min-height: 56px;
   display: flex;
-  margin-bottom: 33px;
 
   @media #{$mobile} {
     min-height: 40px;
