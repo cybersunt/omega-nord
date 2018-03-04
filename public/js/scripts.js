@@ -9,30 +9,28 @@
 
  // slideshow script
 (function() {
-  var interval = 3000;
+  if (document.documentElement.clientWidth > '768') {
+    var interval = 3000;
 
-  var slideInterval = setInterval(nextSlide, interval);
-  var toggleInterval = setInterval(nextToggle, interval);
+    var slideInterval = setInterval(nextSlide, interval);
+    var toggleInterval = setInterval(nextToggle, interval);
 
-  var slides = document.querySelectorAll('.news__slide');
-  var toggles = document.querySelectorAll('.news__item');
+    var slides = document.querySelectorAll('.news__slide');
+    var toggles = document.querySelectorAll('.news__item');
 
-  var currentSlide = 1;
-  var currentToggle = 1;
+    var currentSlide = 1;
+    var currentToggle = 1;
 
-  function nextSlide() {
-    slides[currentSlide].classList.remove('news__slide--active');
-    currentSlide = (currentSlide + 1)%slides.length;
-    slides[currentSlide].classList.add('news__slide--active');
+    function nextSlide() {
+      slides[currentSlide].classList.remove('news__slide--active');
+      currentSlide = (currentSlide + 1)%slides.length;
+      slides[currentSlide].classList.add('news__slide--active');
+    }
+
+    function nextToggle() {
+      toggles[currentToggle].classList.remove('news__item--active');
+      currentToggle = (currentToggle + 1)%toggles.length;
+      toggles[currentToggle].classList.add('news__item--active');
+    }
   }
-
-  function nextToggle() {
-    toggles[currentToggle].classList.remove('news__item--active');
-    currentToggle = (currentToggle + 1)%toggles.length;
-    toggles[currentToggle].classList.add('news__item--active');
-  }
- })();
-
-// (document.documentElement.clientWidth > '768')
-
-
+})();
