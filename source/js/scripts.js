@@ -1,13 +1,11 @@
  // nav toggle script for mobile version
 (function () {
-  document.querySelector('.main-nav').classList.remove('main-nav--nojs');
   var navToggle = document.querySelector('.nav-toggle');
 
   navToggle.addEventListener('click', function () {
     navToggle.classList.toggle('nav-toggle--open');
   })
 })();
-
 
  // slideshow script
 (function() {
@@ -16,26 +14,22 @@
   var slideInterval = setInterval(nextSlide, interval);
   var toggleInterval = setInterval(nextToggle, interval);
 
-  var slides = document.querySelectorAll('.slideshow__item');
-  var toggles = document.querySelectorAll('.slideshow__toggle');
+  var slides = document.querySelectorAll('.news__slide');
+  var toggles = document.querySelectorAll('.news__item');
 
-  var currentSlide = 0;
-  var currentToggle = 0;
-
-  slides.forEach(function(item, i) {
-    item.className = 'slideshow__item slideshow__item--slide' + (i + 1);
-  });
+  var currentSlide = 1;
+  var currentToggle = 1;
 
   function nextSlide() {
-    slides[currentSlide].classList.remove('slideshow__item--active');
+    slides[currentSlide].classList.remove('news__slide--active');
     currentSlide = (currentSlide + 1)%slides.length;
-    slides[currentSlide].classList.add('slideshow__item--active');
+    slides[currentSlide].classList.add('news__slide--active');
   }
 
   function nextToggle() {
-    toggles[currentToggle].classList.remove('slideshow__toggle--checked');
+    toggles[currentToggle].classList.remove('news__item--active');
     currentToggle = (currentToggle + 1)%toggles.length;
-    toggles[currentToggle].classList.add('slideshow__toggle--checked');
+    toggles[currentToggle].classList.add('news__item--active');
   }
  })();
 

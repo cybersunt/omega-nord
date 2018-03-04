@@ -64,9 +64,9 @@
 .main-nav__link {
   @include text(15px, 15px, $lightsilver);
   width: inherit;
-  display: flex;
 
   @media #{$tablet} {
+    display: flex;
     text-decoration: underline;
     display: block;
 

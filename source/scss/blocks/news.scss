@@ -42,6 +42,15 @@
 
 .news__slide {
   position: relative;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.news__slide-link {
+  width: inherit;
 }
 
 .news__slide-img {
@@ -66,6 +75,7 @@
     line-height: 20px;
     padding-left: 100px;
     padding-right: 100px;
+    width: 100%;
   }
 }
 
@@ -114,6 +124,11 @@
   padding: 4.1% 4.3% 3.65%;
   background-color: $palegray;
   position: relative;
+  border-bottom: 1px solid $white;
+
+  &:last-child {
+    border-bottom: 0;
+  }
 
   @media #{$desktop} {
     padding: 15px;
@@ -130,8 +145,6 @@
 }
 
 .news__item--active {
-  border-top: 1px solid $white;
-  border-bottom: 1px solid $white;
   background-color: $darkpink;
 
   @media #{$desktop} {

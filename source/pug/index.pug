@@ -35,15 +35,15 @@ html(lang='ru')
     h1.visually-hidden Косметологические услуги
     section.news
       +heading('news', 'Новости:')
-      .news__slides.slideshow
+      .news__slides
         ul.news__slides-list.slideshow__list
-          li.news__slide.slideshow__item.slideshow__item--active
+          li.news__slide
             a(href="#").news__slide-link
               img(src='img/content/slide.jpg', alt='Медицинское образование в РФ в сфере косметологии').news__slide-img
               .news__layout
                 p.news__slide-heading Медицинское образование в РФ в сфере косметологии: уровни, стандарты, тонкости
-                p.news__slide-description В статье речь пойдет о среднем и высшем медицинском образовании в сфере эстетической медицины.
-          li.news__slide.slideshow__item
+                p.news__slide-description В статье речь пойдет о среднем и высшем медицинском образовании в сфере
+          li.news__slide.news__slide--active
             a(href="#").news__slide-link
               img(src='img/content/slide.jpg', alt='Медицинское образование в РФ в сфере косметологии').news__slide-img
               .news__layout
@@ -54,18 +54,18 @@ html(lang='ru')
               img(src='img/content/slide.jpg', alt='Медицинское образование в РФ в сфере косметологии').news__slide-img
               .news__layout
                 p.news__slide-heading Медицинское образование в РФ в сфере косметологии
-                p.news__slide-description В статье речь пойдет о среднем и высшем медицинском образовании в сфере эстетической медицины.
+                p.news__slide-description В госпитале Вишневского научились выращивать сердце в пробирке
       .news__annotation
-        ul.news__list.slideshow__toggles
-          li.news__item.slideshow__toggle
+        ul.news__list
+          li.news__item
             a(href='#').news__link
              img(src='img/content/pic-news-item.png', alt='Медицинское образование в РФ в сфере косметологии').news__thumb
              p.news__description В госпитале Вишневского научились выращивать сердце в пробирке
-          li.news__item.news__item--active.slideshow__toggle.slideshow__toggle--active
+          li.news__item.news__item--active
             a(href='#').news__link
              img(src='img/content/pic-news-item.png', alt='Медицинское образование в РФ в сфере косметологии').news__thumb
              p.news__description В госпитале Вишневского научились выращивать сердце в пробирке
-          li.news__item.slideshow__toggle
+          li.news__item
             a(href='#').news__link
              img(src='img/content/pic-news-item.png', alt='Медицинское образование в РФ в сфере косметологии').news__thumb
              p.news__description В госпитале Вишневского научились выращивать сердце в пробирке
@@ -87,3 +87,5 @@ html(lang='ru')
                   .procedures__img-corner.procedures__img-corner--bottom-right
                   img(src= procedure.imgSrc, alt= procedure.imgAlt).procedures__img
                 span= procedure.name
+
+    script(src='js/scripts.min.js')
