@@ -3,11 +3,33 @@
   background-image: url('../img/decoration/bg.jpg');
   background-position: 0 0;
   background-repeat: no-repeat;
-  box-shadow: 0 0 5px #008800;
+
+  @media #{$tablet} {
+    background: none;
+    background-color: $turquoise;
+  }
 }
 
 .header__wrap {
   @include wrap;
-  padding: 150px 0 46px 0;
-  bbox-shadow: 0 0 5px red;
+
+  @media #{$tablet} {
+    padding: 0 6.5%;
+    min-width: 278px;
+    min-height: 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__name-site {
+  display: none;
+
+  @media #{$tablet} {
+    display: block;
+    font-size: 16px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 00;
+  }
 }

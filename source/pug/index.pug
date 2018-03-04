@@ -21,16 +21,17 @@ html(lang='ru')
   body
     header.header
       .header__wrap
+        .header__name-site Косметологические услуги
         button(type='button', aria-label='Переключатель открыть/закрыть меню').nav-toggle
           span
-        nav.main-nav
-          ul.main-nav__list
-            each menuitem, value in menuitems
-              li.main-nav__item
-                a.main-nav__link(href='#')
-                  .main-nav__img-wrap
-                    img(src= menuitem.imgSrc, alt= menuitem.imgAlt, width= menuitem.imgWidth, height= menuitem.imgHeight).main-nav__icon
-                  span= menuitem.name
+      nav.main-nav
+        ul.main-nav__list
+          each menuitem, value in menuitems
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                .main-nav__img-wrap
+                  img(src= menuitem.imgSrc, alt= menuitem.imgAlt, width= menuitem.imgWidth, height= menuitem.imgHeight).main-nav__icon
+                span= menuitem.name
     h1.visually-hidden Косметологические услуги
     section.news
       +heading('news', 'Новости:')
