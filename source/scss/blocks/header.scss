@@ -1,4 +1,5 @@
 .header {
+  // @include wrap;
   width: 100%;
   background-image: url('../img/decoration/bg.jpg');
   background-position: 0 0;
@@ -7,16 +8,10 @@
   @media #{$tablet} {
     background: none;
     background-color: $turquoise;
-  }
-}
-
-.header__wrap {
-  @include wrap;
-
-  @media #{$tablet} {
-    padding: 0 6.5%;
     min-width: 278px;
     min-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -26,6 +21,8 @@
   display: none;
 
   @media #{$tablet} {
+    width: calc(100% - 66px);
+    padding-left: 6.5%;
     display: block;
     font-size: 16px;
     line-height: 40px;

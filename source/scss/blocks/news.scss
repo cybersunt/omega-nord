@@ -132,6 +132,12 @@
 
   @media #{$desktop} {
     padding: 15px;
+    border-bottom: 0;
+    border-right: 1px solid $white;
+
+    &:last-child {
+      border-right: 0;
+    }
   }
 
   @media #{$tablet} {
@@ -150,8 +156,6 @@
   @media #{$desktop} {
     border-top: 0;
     border-bottom: 0;
-    border-left: 1px solid $white;
-    border-right: 1px solid $white;
   }
 
   @media #{$tablet} {
@@ -279,15 +283,7 @@
   padding-right: 70px;
   border-radius: 35px;
   position: relative;
-
-  @media #{$tablet} {
-    width: 100%;
-    display: block;
-    font-size: 16px;
-    line-height: 20px;
-    padding-top: 16px;
-    padding-bottom: 16px;
- }
+  transition: box-shadow 1s ease, color 1s ease;
 
   &::before,
   &::after {
@@ -321,7 +317,7 @@
 
   &:hover,
   &:focus {
-    background-color: $blue;
+    box-shadow: inset 298px 0 $blue;
     color: $white;
   }
 
@@ -331,4 +327,18 @@
   &:focus::after {
     background-color: $white;
   }
+
+  @media #{$tablet} {
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    &:hover,
+    &:focus {
+      box-shadow: inset 690px 0 $blue;
+    }
+}
 }
